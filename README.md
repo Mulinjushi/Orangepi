@@ -139,7 +139,6 @@ git clone https://github.com/mindspore-courses/orange-pi-mindspore.git
 ```
 cd /home/HwHiAiUser/samples/notebooks/  
 ./start_notebook.sh
-
 ```
 然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！
 
