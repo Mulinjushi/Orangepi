@@ -131,3 +131,15 @@ chmod +x ./Ascend-cann-kernels-310b_8.0.RC2.alpha003_linux.run
 pip install mindspore-2.4.0-cp39-cp39-linux_aarch64.whl
 ```
 下载成功之后，我们就完成了配置环境的全流程了！
+然后就是我们后面的流程，你可以尝试一下华为官网给出的案例：https://github.com/mindspore-courses/orange-pi-mindspore ，或者直接git下来：
+```
+git clone https://github.com/mindspore-courses/orange-pi-mindspore.git
+```
+和windows系统不一样，我们的推理执行要先运行一下sh文件：
+```
+cd /home/HwHiAiUser/samples/notebooks/  
+./start_notebook.sh
+
+```
+然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！
+
