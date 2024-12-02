@@ -140,5 +140,6 @@ git clone https://github.com/mindspore-courses/orange-pi-mindspore.git
 cd /home/HwHiAiUser/samples/notebooks/  
 ./start_notebook.sh
 ```
-然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！
-
+然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！<br>
+**致谢：**<br>
+**感谢工创实践创新项目II课程指导老师郝家胜老师对本次项目的大力支持以及对本次课程的巨大贡献，每次课老师都对我们给予很大的帮助，感谢郝家胜老师对我们的鼓励，在这次课程上我们的收获颇多，都基于郝家胜老师对我们的谆谆教诲。并且感谢助教许昊旻学长对本次香橙派配置方面问题答疑的巨大帮助！**
