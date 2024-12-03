@@ -64,12 +64,14 @@ network:
           via: 192.168.137.1  #这里的IP修改请继续阅读下文
       nameservers:
         addresses: [8.8.8.8, 8.8.4.4]
-
 ```
-via后面的IP实际上是windows的网络连接部分来查询的。快捷键：windows+R，弹出后在里面输入ncpa.cpl，会自动弹出。
-找到外界网口的选项，TODO!!!这里还没写完 <br>
-最后成功通过SSH连接上了开发板，你会发现
-这时MobaxTerm的左边就有了可以之间看到的内部文件了，这样就方便很多了。<br>
+via后面的IP实际上是windows的网络连接部分来查询的。快捷键：windows + R，弹出后在里面输入ncpa.cpl，会自动弹出。
+<img src="7.png"><br>
+找到以太网或外界网口之类的选项，点击**属性**。<br>
+<img src="8.png"><br>
+看这里的IP地址，这里的地址实际上就是via后面的ip，这样我们就后期可以尝试使用SSH进行连接了，账号密码还是一样的，可以先尝试一下root账户，密码Mind@123。连上以后这时MobaxTerm的左边就有了可以之间看到的内部文件了，这样就方便很多了。<br>
+<img src="9.png"><br>
+然后使用网络共享，就可以成功联网了。
 当然还有个简单的联网方式，如果你的板子可以连接wifi，可以直接通过以下命令：
 ```
 nmcli dev wifi
@@ -78,7 +80,11 @@ wifi将自己弹出，找到对应的wifi进行以下命令连接：
 ```
 sudo nmcli dev wifi connect <wifi_name> password <wifi_password>
 ```
-这样直接就能联网啦！
+最后我们检查一下（只要能ping通百度，就是成功连接啦）：
+```
+ping www.baidu.com
+```
+只要能ping通，联网就成功啦！为什么我们要联网呢，因为conda的环境很多都是基于网络的，实际上新建一个虚拟环境都是需要网络的。
 ### 4.3 环境配置
 这里我们高度概括，需要做两件事情：对CANN进行升级（分为Toolkit和Kernels），下载mindspore。<br>
 #### 4.3.1 配置toolkit文件
@@ -132,6 +138,7 @@ pip install mindspore-2.4.0-cp39-cp39-linux_aarch64.whl
 ```
 下载成功之后，我们就完成了配置环境的全流程了！
 然后就是我们后面的流程，你可以尝试一下华为官网给出的案例：https://github.com/mindspore-courses/orange-pi-mindspore ，或者直接git下来：
+
 ```
 git clone https://github.com/mindspore-courses/orange-pi-mindspore.git
 ```
@@ -139,7 +146,7 @@ git clone https://github.com/mindspore-courses/orange-pi-mindspore.git
 ```
 cd /home/HwHiAiUser/samples/notebooks/  
 ./start_notebook.sh
+
 ```
-然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！<br>
-**致谢：**<br>
-**感谢工创实践创新项目II课程指导老师郝家胜老师对本次项目的大力支持以及对本次课程的巨大贡献，每次课老师都对我们给予很大的帮助，感谢郝家胜老师对我们的鼓励，在这次课程上我们的收获颇多，都基于郝家胜老师对我们的谆谆教诲。并且感谢助教许昊旻学长对本次香橙派配置方面问题答疑的巨大帮助！**
+然后就是和jupyter notebook一样的用法了，读者们可以自行摸索学习了！谢谢你能耐心看到这里，祝你工程顺利！
+
